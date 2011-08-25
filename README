@@ -1,0 +1,32 @@
+ bitcoin-wallet-rsa a simple bitcoin wallet backup system that uses RSA encryption
+    Copyright (C) 2011 macintosh264
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+
+===USAGE===
+Use these scripts to encrypt and decrypt your bitcoin wallet using RSA encryption. Both scripts are written using php and openssl. If you are on windows just grab cygwin. To encrypt your wallet (this example is on a mac) just run the following command:
+
+cd <bitcoin-wallet-rsa location>
+php -f ./encrypt.php -- ~/Library/Application\ Support/Bitcoin/wallet.dat
+
+two new files will appear in that directory. One that is about 887 bytes and the other tat is about 3MB. Keep both these files together and safe.
+
+Then to decrypt
+cd <bitcoin-wallet-rsa location>
+php -f ./decrypt.php -- ./WALLET_ENCRYPTED ./DECRYPT_KEY
+
+a new file called WALLET_DECRYPTED.dat will appear, that is your decrypted wallet.
+
+It is that simple. ENJOY!
